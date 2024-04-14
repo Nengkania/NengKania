@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Sederhana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Style tambahan untuk keranjang belanja */
+        .btnKeranjang {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">KaniaStore</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="Beranda">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="" href="#Beranda">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Produk">Produk</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Keranjang">Keranjang</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Kontak">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Red and White Simple Personal Address Label.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Cuplikan layar 2024-04-13 174831.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Red Modern Spicy Chili Kitchen Label.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </nav>
+       
+
+        <!-- catalog -->
+        <h3 class="text-center" id="Produk">Produk Kami</h3>
+        <div class="text-center w-50 mx-auto fw-light">Snack Pedas Huhah ini adalah makanan ringan untuk Anda yang setia menemani kapan pun di saat anda merasa lapar. Dengan tekstur yang renyah, pedas, serta gurih, Snack pedas Huhah ini menyajikan kenikmatan tak terduga di setiap gigitannya.
+        </div>
+        <ul class="row row-cols-md-2 gx-5 p-5">
+            <div class="col mb-5">
+                <div class="card shadow">
+                    <img src="Cuplikan layar 2024-04-13 172521.png" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text text-center">Makaroni Kerang Pedas</p>
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk1()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(1)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 6.000</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col mb-6">
+                <div class="card shadow">
+                    <img src="produk 2.png" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text text-center">Basreng Pedas</p>
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk2()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(2)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 42.000</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col mb-6">
+                <div class="card shadow">
+                    <img src="produk 3 (1).png" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text text-center">Kerupuk Kulit Pedas</p>
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk3()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(3)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 30.000</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col mb-6">
+                <div class="card shadow">
+                    <img src="produk 3 (2).png" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text text-center">Mie Lidi</p>
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk4()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(4)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 5.999</span>
+                    </div>
+                  </div>
+            </div>
+        </ul>
+
+                <!-- Keranjang -->
+                <div id="Keranjang" class="px-4 py-4">
+                    <h3 class="text-center">Keranjang Belanja</h3>
+                    <ul id="listKeranjang" class="list-group">
+                    </ul>
+                    <div id="totalHarga" class="text-center mt-3"></div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-danger" onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+                        <button class="btn btn-success" onclick="beliSemuaProduk()">Beli</button>
+                    </div>
+                </div>
+        
+                <!-- Tentang Kami -->
+                <div class="px-4 py-4 bg-secondary text-center">
+                    <div class="mx-auto w-75"></div>
+                    <h3 class="text-white"> Tentang Kami</h3>
+                    <p class="text-center text-white">Snack pedas Huhah ini adalah sebuah toko yang menyediakan berbagai macam aneka snack atau cemilan yang dapat dikonsumsi kapanpun dan dimanapun. Seiring dengan semakin berkembangnya teknologi, maka kami mencoba berinovasi dalam berbisnis. Salah satu bentuk inovasinya adalah dengan menyediakan berbagai layanan toko kami melalui media internet, dan toko online ini adalah salah satu bentuk pelayanan kami kepada Anda.</p>
+                    <p class="text-center text-white">Keberadaan dari toko online ini diharapkan dapat mempermudah Anda untuk mendapatkan berbagai produk berkualitas tinggi namun dengan harga yang terjangkau. Dalam memberi layanan, kami selalu mencoba memberi persembahan terbaik kepada siapapun. Selain itu kami juga selalu menjunjung tinggi nilai-nilai etika yang baik, seperti kejujuran, ketepatan, dan profesionalitas dalam berbisnis. Mudah-mudahan dengan adanya toko online kami bisa memberi banyak manfaat bagi Anda.</p>
+                </div>
+        
+
+                 <!-- Kontak -->
+        <div id="Kontak" class="px-4 py-4 bg-secondary text-center">
+            <div class="mx-auto w-75"></div>
+            <h3 class="text-white">Kontak Kami</h3>
+            <!-- Tautan Kontak Kami -->
+            <p class="text-center text-white">Silakan hubungi kami melalui nomor <a href="https://wa.me/+6288972128429"></a>@088972128429</p>
+
+            <!-- Tautan Instagram -->
+            <p class="text-center text-white">Ikuti kami di Instagram: <a href="https://www.instagram.com/xy.nazly_?igsh=MWM4bm95bGdzMm9kZg==">@xy.nazly_</a></p>
+
+            <!-- copyright -->
+            <div class="text-center text-white border-top ">&copy; 2024 - KaniaStore</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        var keranjang = [];
+
+        function tambahKeKeranjang(id) {
+            var produk;
+            if (id === 1) {
+                produk = { nama: "Makaroni Kerang Pedas", harga: 6000 };
+            } else if (id === 2) {
+                produk = { nama: "Basreng Pedas", harga: 42000 };   
+            } else if (id === 3) {
+                produk = {nama: "Kerupuk Kulit Pedas", harga: 30000 };
+            } else if (id ===4){
+                produk = { nama: "Mie Lidi", harga: 5999 };
+            }
+            
+
+            keranjang.push(produk);
+            tampilkanKeranjang();
+        }
+
+        function tampilkanKeranjang() {
+            var listKeranjang = document.getElementById("listKeranjang");
+            var totalHarga = 0;
+            listKeranjang.innerHTML = "";
+            keranjang.forEach(function(produk) {
+                var listItem = document.createElement("li");
+                listItem.className = "list-group-item";
+                listItem.textContent = produk.nama + " - Rp. " + produk.harga.toLocaleString();
+                listKeranjang.appendChild(listItem);
+                totalHarga += produk.harga;
+            });
+            var totalHargaElement = document.getElementById("totalHarga");
+            totalHargaElement.textContent = "Total Harga: Rp. " + totalHarga.toLocaleString();
+        }
+
+        function kosongkanKeranjang() {
+            keranjang = [];
+            tampilkanKeranjang();
+        }
+
+        function beliSemuaProduk() {
+            // Ganti nomor WhatsApp dengan nomor toko Anda
+            var nomorWhatsApp = "6288972128429";
+            var pesan = "Halo, saya ingin membeli produk: ";
+            keranjang.forEach(function(produk) {
+                pesan += produk.nama + ", ";
+            });
+            pesan += ". Terima kasih!";
+            var urlWhatsApp = "https://wa.me/" + nomorWhatsApp + "?text=" + encodeURIComponent(pesan);
+            window.open(urlWhatsApp, "_blank");
+        }
+
+        function beliProduk1() {
+            // situs web lain
+            var urlProduk = "https://shopee.co.id/makaroni-kerang-pedas-asin-daun-jeruk-i.120198661.16770572508?sp_atk=f6190738-34fb-4eea-b3aa-053be6a0f6f1&xptdk=f6190738-34fb-4eea-b3aa-053be6a0f6f1";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+        function beliProduk2() {
+            // situs web lain
+            var urlProduk = "https://shopee.co.id/1KG-Basreng-koin-Sultan-Bandung-i.57540496.16606985614?sp_atk=56b185e1-4735-4496-8d5c-e8a981e78739&xptdk=56b185e1-4735-4496-8d5c-e8a981e78739";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+        function beliProduk3() {
+            // situs web lain
+            var urlProduk = "https://shopee.co.id/1-BAL-KERUPUK-KULIT-SAPI-DOROKDOK-ANEKA-RASA-SUPER-RENYAH-i.57804445.18693794563?sp_atk=bb53efa0-e302-4c3c-936d-edc5ac813a08&xptdk=bb53efa0-e302-4c3c-936d-edc5ac813a08";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+        function beliProduk4() {
+            // situs web lain
+            var urlProduk = "https://shopee.co.id/MIE-LIDI-NABIL-KEMASAN-BOX-500ML-MURAH-SUPER-RENYAH-i.138620756.13771951515?sp_atk=cd627cbe-5f98-4f43-a23f-6f5efa88f260&xptdk=cd627cbe-5f98-4f43-a23f-6f5efa88f260";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+    </script>
+</body>
+</html>
